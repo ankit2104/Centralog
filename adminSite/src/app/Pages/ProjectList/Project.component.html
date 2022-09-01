@@ -1,0 +1,90 @@
+<div class="mat-table-wrapper">
+  <mat-table
+    class="lmat-elevation-z8"
+    #table
+    [dataSource]="dataSource"
+    matSortDirection="asc"
+    matSortDisableClear
+  >
+    <!-- Checkbox Column -->
+
+    <!-- Table with selection -->
+    <!-- https://run.stackblitz.com/api/angular/v1?file=app%2Ftable-selection-example.ts -->
+
+    <ng-container matColumnDef="id">
+      <!-- ATTRIBUTE mat-sort-header  for sorting | https://material.angular.io/components/sort/overview -->
+      <mat-header-cell *matHeaderCellDef mat-sort-header>API KEY (please copy it to library)</mat-header-cell>
+      <mat-cell *matCellDef="let project">{{ project.id }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Project Name</mat-header-cell
+      >
+      <mat-cell *matCellDef="let project">{{ project.name }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="created">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Created Date</mat-header-cell
+      >
+      <mat-cell *matCellDef="let project">{{ project.created }}</mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="logCount">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Log Count</mat-header-cell
+      >
+      <mat-cell *matCellDef="let project">{{ project.logCount }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+      <mat-cell *matCellDef="let project">
+        <button
+          mat-icon-button
+          color="primary"
+          (click)="ViewLogs(project)"
+          matTooltip="View Logs"
+        >
+          <mat-icon>view</mat-icon>
+          <span></span></button
+        >&nbsp;
+        <button mat-menu-item color="warn" class="deletebtn" (click)="Delete(project.id)"
+								matTooltip="Delete Project">
+								<mat-icon>Delete</mat-icon>
+								<span></span>
+							</button>
+        <!-- <button mat-menu-item color="warn" *ngIf="IsdeleteCustomer" class="deletebtn" (click)="Delete(customer.customerId)"
+                    matTooltip="Delete customer">
+                    <mat-icon>delete</mat-icon>
+                    <span>Delete Customer</span>
+                </button> -->
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+  <!-- Message for empty data  -->
+  <div class="mat-table-message" *ngIf="!dataSource">No records found</div>
+  <div class="mat-table-message" *ngIf="isPreloadTextViewed">
+    Please wait....
+  </div>
+</div>
+
+<!-- start: BOTTOM -->
+<div class="mat-table-bottom">
+  <mat-spinner [diameter]="20" *ngIf="loading"></mat-spinner>
+  <mat-paginator
+    [pageSize]="10"
+    [pageSizeOptions]="[10, 25, 50]"
+    [showFirstLastButtons]="true"
+  >
+  </mat-paginator>
+</div>
+<div class="ng-container">
+  <button (click)="create()" style="margin: 10px 10px 10px 10px;">Create New Project</button>
+</div>

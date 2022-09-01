@@ -1,0 +1,5 @@
+﻿{
+  "Topic": "Logger",
+  "BootstrapServers": "localhost:9092",
+  "ProjectId": "62dfbb0c8e756f451d41f5c4"
+}

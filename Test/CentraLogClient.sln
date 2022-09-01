@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{07D91572-EAEC-4B91-9DF8-B00689CF2BAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentraLogClient", "CentraLogClient\CentraLogClient.csproj", "{405A731D-D76A-45D1-AB99-885269C883F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07D91572-EAEC-4B91-9DF8-B00689CF2BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D91572-EAEC-4B91-9DF8-B00689CF2BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D91572-EAEC-4B91-9DF8-B00689CF2BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D91572-EAEC-4B91-9DF8-B00689CF2BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{405A731D-D76A-45D1-AB99-885269C883F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{405A731D-D76A-45D1-AB99-885269C883F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{405A731D-D76A-45D1-AB99-885269C883F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{405A731D-D76A-45D1-AB99-885269C883F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B18A978-EE5C-44A4-BFF6-D33EB61585EA}
+	EndGlobalSection
+EndGlobal

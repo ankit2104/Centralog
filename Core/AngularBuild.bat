@@ -1,0 +1,1 @@
+npm run build --prefix ../adminSite/ & (robocopy ../adminSite/dist/admin-site ./wwwroot ) ^& IF %ERRORLEVEL% LEQ 1 exit 0

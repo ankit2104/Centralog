@@ -1,0 +1,18 @@
+<div class="ng-container">
+  <div class="container">
+    <label>Enter Project Name:</label>
+    <input
+      type="text"
+      [(ngModel)]="project.name"
+      style="margin: 10px 10px 10px 10px"
+    />
+  </div>
+  <div class="container">
+    <button (click)="goBack()" style="margin: 10px 10px 10px 10px">
+      Cancel
+    </button>
+    <button (click)="submit()" style="margin: 10px 10px 10px 10px">
+      Create
+    </button>
+  </div>
+</div>
